@@ -1,0 +1,2 @@
+rootProject.name = 'WBS Technical Test'
+include ':frontend', ':backend'

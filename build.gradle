@@ -1,0 +1,19 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+}
+
+apply plugin: 'java'
+  
+task copyFrontend(type: Copy) {
+    dependsOn ":frontend:build"
+    from "$rootDir/frontend/dist"
+    into "$rootDir/backend/build/resources/main/static/."
+}
+ 
+copyFrontend.dependsOn ":frontend:build"
+compileJava.dependsOn copyFrontend 
