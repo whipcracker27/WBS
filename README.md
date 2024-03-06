@@ -1,1 +1,1 @@
-# Warick Business School - Technical test
+# Warick Business School - Technical Test
