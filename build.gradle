@@ -7,8 +7,6 @@ buildscript {
     }
 }
 
-apply plugin: 'java'
-  
 task copyFrontend(type: Copy) {
     dependsOn ":frontend:build"
     from "$rootDir/frontend/dist"
@@ -16,4 +14,3 @@ task copyFrontend(type: Copy) {
 }
  
 copyFrontend.dependsOn ":frontend:build"
-compileJava.dependsOn copyFrontend 
