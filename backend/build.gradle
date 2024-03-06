@@ -11,6 +11,14 @@ java {
 	sourceCompatibility = '21'
 }
 
+jar {
+	enabled=true
+	archiveClassifier.set("")
+	manifest {
+		attributes 'main-Class': 'com.wbs.technical.graph.GraphApplication'
+	}
+}
+
 repositories {
 	mavenCentral()
 }
