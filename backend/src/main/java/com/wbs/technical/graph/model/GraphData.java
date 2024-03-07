@@ -3,21 +3,19 @@ package com.wbs.technical.graph.model;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import com.wbs.technical.graph.repository.GraphId;
+
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.IdClass;
 import lombok.Data;
 
 @Data
 @Entity
+@IdClass(GraphId.class)
 public class GraphData {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Date d;
-    private String team;
-    private String code;
+    @Id private Date d;
+    @Id private String team;
+    @Id private String code;
     private BigDecimal v;
-
 }
