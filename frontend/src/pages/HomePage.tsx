@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 
+import { DataTable } from "@/components/data-table/DataTable";
+import { Data, columns } from "@/components/data-table/columns";
+
 const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
-
 export default function HomePage() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Data[]>([])
 
   useEffect(function () {
     async function fetchData() {
@@ -22,12 +24,8 @@ export default function HomePage() {
 
   return (
     <main className="homepage">
-      <h1>Homepage of my Dummy Product Page</h1>
-      <div className="products__list">
-        {data.map((item, index) => {
-          return <div key={index}>{item.team}</div>;
-        })}
-      </div>
+      <h1>WBS Technical Test</h1>
+      <DataTable columns={columns} data={data} />
     </main>
   );
 }
