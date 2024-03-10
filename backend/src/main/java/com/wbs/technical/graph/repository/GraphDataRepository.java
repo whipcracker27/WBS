@@ -1,8 +1,13 @@
 package com.wbs.technical.graph.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+import org.springframework.data.repository.PagingAndSortingRepository;
 
 import com.wbs.technical.graph.model.GraphData;
 
-public interface GraphDataRepository extends JpaRepository<GraphData, GraphId> {
+
+public interface GraphDataRepository extends PagingAndSortingRepository<GraphData, GraphId> {
+
+    List<GraphData> findAll();
 }
