@@ -33,11 +33,13 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^8.0.0",
     "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",
     "@storybook/addon-onboarding": "^1.0.11",
     "@storybook/blocks": "^7.6.17",
+    "@storybook/icons": "^1.2.8",
     "@storybook/react": "^7.6.17",
     "@storybook/react-vite": "^7.6.17",
     "@storybook/test": "^7.6.17",
@@ -55,6 +57,7 @@
     "eslint-plugin-storybook": "^0.8.0",
     "postcss": "^8.4.35",
     "storybook": "^7.6.17",
+    "storybook-addon-responsive-views": "^2.3.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.4",
