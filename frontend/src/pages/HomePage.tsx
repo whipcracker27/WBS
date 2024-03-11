@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 
+import ReRadarChart from "@/charts/ReRadarChart";
+import UbLineChart from "@/charts/UbLineChart";
+import UbScatterChart from "@/charts/UbScatterChart";
 import { DataTable } from "@/components/data-table/DataTable";
 import { Data, columns } from "@/components/data-table/columns";
 
@@ -26,6 +29,9 @@ export default function HomePage() {
     <main className="homepage">
       <h1>WBS Technical Test</h1>
       <DataTable columns={columns} data={data} />
+      <ReRadarChart />
+      <UbLineChart />
+      <UbScatterChart />
     </main>
   );
 }
