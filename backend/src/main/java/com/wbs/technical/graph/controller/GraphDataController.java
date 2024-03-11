@@ -23,7 +23,7 @@ public class GraphDataController {
     private GraphDataRepository graphRepository;
 
     @CrossOrigin
-    @GetMapping("/")
+    @GetMapping
     public List<GraphData> getAllEventData() {
         return graphRepository.findAll();
     }
