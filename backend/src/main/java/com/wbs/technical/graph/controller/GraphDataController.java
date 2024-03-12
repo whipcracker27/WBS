@@ -34,4 +34,28 @@ public class GraphDataController {
         Pageable secondPageWithFiveElements = PageRequest.of(page, size);
         return graphRepository.findAll(secondPageWithFiveElements).getContent();
     }
+
+    @CrossOrigin
+    @GetMapping(value="/date-series")
+    public List<GraphData> getEventByTeamAndCode(
+        @RequestParam(value="team", required=false) String team, 
+        @RequestParam(value="code", required=false) String code) {
+        
+        return graphRepository.find(team, code);
+    }
+
+    //Quick API to list Teams
+    @CrossOrigin
+    @GetMapping(value="/teams")
+    public List<String> getTeams() {
+        return graphRepository.findTeams();
+    }
+
+    //Quick API to list Teams
+    @CrossOrigin
+    @GetMapping(value="/codes")
+    public List<String> getCodes() {
+        return graphRepository.findCodes();
+    }
+
 }
