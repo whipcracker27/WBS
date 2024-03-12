@@ -4,7 +4,7 @@ import { columns } from "@/components/data-table/columns";
 import { RowModel, Table, getCoreRowModel, useReactTable } from "@tanstack/react-table";
 
 export default {
-    title: 'Design System/Atoms/DataTable',
+    title: 'Design System/Components/DataTable',
     component: DataTable,
     docs: {
       autodocs: false,

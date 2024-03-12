@@ -65,13 +65,13 @@ export function DataTable<TData, TValue>({
         />
       </div>      
       <div className="rounded-md border">
-      <Table className="table-auto">
-        <TableHeader className="border-b border-neutral-200 bg-white font-medium dark:border-white/10 dark:bg-body-dark">
+      <Table>
+        <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => {
                 return (
-                  <TableHead key={header.id} className="px-6 py-4">
+                  <TableHead key={header.id}>
                     {header.isPlaceholder
                       ? null
                       : flexRender(

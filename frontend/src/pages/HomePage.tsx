@@ -28,10 +28,10 @@ export default function HomePage() {
   return (
     <main className="homepage">
       <h1>WBS Technical Test</h1>
-      <DataTable columns={columns} data={data} />
       <ReRadarChart />
       <UbLineChart />
       <UbScatterChart />
+      <DataTable columns={columns} data={data} />
     </main>
   );
 }
