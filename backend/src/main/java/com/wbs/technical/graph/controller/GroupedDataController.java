@@ -27,4 +27,6 @@ public class GroupedDataController {
     public List<GroupedData> getAllGrouped() {
         return groupedRepository.findAll();
     }
+
+    
 }

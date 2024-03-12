@@ -1,6 +1,8 @@
 import type { Preview } from "@storybook/react";
 import { withPerformance } from 'storybook-addon-performance';
 
+import '../src/App.css';
+
 export const decorators = [withPerformance];
 
 const preview: Preview = {
